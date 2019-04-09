@@ -11,10 +11,10 @@ const mqtt = require("mqtt");
 
 
 const REST_PORT = (process.env.PORT || 5000);
-const APIAI_ACCESS_TOKEN = process.env.APIAI_ACCESS_TOKEN || 'e865f72c9d8b40a788359bc8a2534872';
+const APIAI_ACCESS_TOKEN = process.env.APIAI_ACCESS_TOKEN || '8657a0540f134c58a569434e1f3aac4d';
 const APIAI_LANG = process.env.APIAI_LANG || 'en';
-const FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN || '123456789';
-const FB_PAGE_ACCESS_TOKEN = process.env.FB_PAGE_ACCESS_TOKEN || 'EAAGoWROQJuoBAOeE2ZB4ZBeSNAgXl4sdOHExz9aGqTQPTH02oZASBZAGDC4BdRNBopZCFuTrKYdlqJahG2BUUfo5piNZAII9w2fzNl17JwEQl4Eu3d25r2HeZCSxZCwQo4P1vzXSR27zhy0NLWpvzO0sH2sEiT9PpasVe725sj2C5wZDZD';
+//const FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN || '123456789';
+//const FB_PAGE_ACCESS_TOKEN = process.env.FB_PAGE_ACCESS_TOKEN || 'EAAGoWROQJuoBAOeE2ZB4ZBeSNAgXl4sdOHExz9aGqTQPTH02oZASBZAGDC4BdRNBopZCFuTrKYdlqJahG2BUUfo5piNZAII9w2fzNl17JwEQl4Eu3d25r2HeZCSxZCwQo4P1vzXSR27zhy0NLWpvzO0sH2sEiT9PpasVe725sj2C5wZDZD';
 const FB_TEXT_LIMIT = 640;
 
 const FACEBOOK_LOCATION = "FACEBOOK_LOCATION";
@@ -363,12 +363,12 @@ class FacebookBot {
     }
 
     connectToMQTT(msg) {
-        var url = 'mqtt://m14.cloudmqtt.com:16129';
+        var url = 'mqtt://m15.cloudmqtt.com:13388';
 
         var options = {
             clientId: 'mqttjs_' + Math.random().toString(16).substr(2, 8),
-            username: 'user1',
-            password: 'password'
+            username: 'SmartHouse',
+            password: '12345678'
         };
 
         var client;
